@@ -8,6 +8,6 @@ services:
 if: tag IS present
 
 script:
- - docker build -t cryptofacilities/bitcoin-abc:${TRAVIS_TAG} .
+ - docker build -t cryptofacilities/bitcoin:${TRAVIS_TAG} .
  - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
- - docker push cryptofacilities/bitcoin-abc:${TRAVIS_TAG}
+ - docker push cryptofacilities/bitcoin:${TRAVIS_TAG}
